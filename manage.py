@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath('./..'))
+sys.path.insert(0, os.path.abspath('./libs'))
+sys.path.insert(0, os.path.abspath('./apps'))
+sys.path.insert(0, os.path.abspath('./external_apps'))
+
+
 from django.core.management import execute_manager
 import imp
 try:
