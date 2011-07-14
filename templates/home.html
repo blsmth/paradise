@@ -8,6 +8,8 @@
     <ul id="on-tour">
         {% for event in events %}
         <li>{{ event.start_date }}{% if event.end_date %} - {{ event.end_date }}{% endif %}: {{ event.title }}</li>
+        {% empty %}
+        <li>No event dates listed. Check back soon.</li>
         {% endfor %}
     </ul>
 </div>
@@ -21,20 +23,20 @@
 <p>We’ll do simple tune ups or full on restorations.With over 30 years of experience we can meet your every need.</p>
 <p>American British or Japanese we like them all. </p>
 <p>We buy motorcycles and parts.</p>
-<p>Looking for a bike we’ll help you find one. Come see us at Rhinebeck antique motorcycle meet  June 11th and 12th.</p>
+<p>Looking for a bike? We’ll help you find one.</p>
 <p>For any questions or comments, please feel free to <a href="{% url contact %}">contact</a> us.</p>
 </div>
 
 
-<div id="home-bios-wrapper" class="grid17-10 block">
-        <div class="bio" id="chuck">
+<div id="home-bios-wrapper" class="grid17-17 row">
+        <div class="bio block" id="chuck">
                 <img class="mug" src="{{ STATIC_URL }}images/chuck_and_pearl.jpg"></li>
                 <ul>
                     <li class="header"><img src="{{ STATIC_URL }}images/chuck_header.png"></li>
                     <li class="description">Chuck has been fixing motorcycles since the age of 7, when he realized he wouldn’t get beat up by the older kids if he repaired their scooters</li>
                 </ul>
         </div>
-        <div class="bio" id="steve">
+        <div class="bio block" id="steve">
                 <img class="mug" src="{{ STATIC_URL }}images/steve_and_hazel.jpg">
                 <ul>
                     <li class="header"><img src="{{ STATIC_URL }}images/steve_header.png"></li>
