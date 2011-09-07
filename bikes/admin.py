@@ -18,7 +18,7 @@ class ImageInline(admin.TabularInline):
     fieldsets = (
         (' ', {
             'classes': ('collapse',),
-            'fields': ('title','description','slug','file'),
+            'fields': ('title','description','file'),
         }),
     )
 
@@ -28,5 +28,9 @@ class BikeAdmin(admin.ModelAdmin):
     list_display = ['name','motto','description']
     prepopulated_fields = {'slug': ('name',)}
     
-    
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ['title','description',]
+
+
 admin.site.register(Bike,BikeAdmin)
+admin.site.register(Image,ImageAdmin)
